@@ -6,13 +6,22 @@ import {
   increment,
   reset,
 } from "./redux/slice/counterSlice";
+import { Navbar } from "./components/Navbar";
+import { BrowserRouter, Route, Routes } from "react-router";
+import LogIn from "./pages/LogIn";
 
 function App() {
   const count = useSelector((state: any) => state.counter.value);
   const dispatch = useDispatch();
   return (
     <>
-      <div className="text-3xl font-semibold bg-white">{count}</div>
+      <Navbar />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/login" element={<LogIn />} />
+        </Routes>
+      </BrowserRouter>
+      {/* <div className="text-3xl font-semibold bg-white">{count}</div>
       <button
         className="p-5 m-5 border cursor-pointer rounded-xl"
         onClick={() => dispatch(increment())}
@@ -36,7 +45,7 @@ function App() {
         onClick={() => dispatch(customValue(30))}
       >
         Reset
-      </button>
+      </button> */}
     </>
   );
 }
