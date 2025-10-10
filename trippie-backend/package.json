@@ -1,0 +1,33 @@
+{
+  "name": "trippie-backend",
+  "version": "0.0.1",
+  "description": "Awesome project developed with TypeORM.",
+  "type": "commonjs",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "body-parser": "^1.20.3",
+    "express": "^5.1.0",
+    "express-fileupload": "^1.5.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.14.3",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^0.3.26",
+    "zod": "^4.1.5"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
+    "@types/express": "^5.0.3",
+    "@types/express-fileupload": "^1.5.1",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^24.3.0",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  },
+  "scripts": {
+    "dev": "nodemon --watch src --ext ts --exec ts-node src/index.ts",
+    "build": "tsc",
+    "start": "ts-node src/index.ts",
+    "typeorm": "typeorm-ts-node-commonjs"
+  }
+}
