@@ -4,6 +4,7 @@ import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 type Props = {
   name?: string;
   placeholder?: string;
+  className?: string;
 };
 
 const PasswordInput = forwardRef(
@@ -16,7 +17,7 @@ const PasswordInput = forwardRef(
           type={showPassword ? "text" : "password"}
           name={props.name}
           id={props.name}
-          className="w-full h-full px-3 border border-stone-400 rounded-xl"
+          className="w-full h-full px-3 bg-white rounded-lg drop-shadow-md "
           placeholder={props.placeholder}
         />
         {!showPassword ? (

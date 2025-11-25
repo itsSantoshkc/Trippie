@@ -9,16 +9,22 @@ import {
 import { Navbar } from "./components/Navbar";
 import { BrowserRouter, Route, Routes } from "react-router";
 import LogIn from "./pages/LogIn";
+import SignUp from "./pages/SignUp";
+import Dashboard from "./pages/Admin/Dashboard";
+import Index from "./pages/User/Index";
 
 function App() {
   const count = useSelector((state: any) => state.counter.value);
   const dispatch = useDispatch();
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <BrowserRouter>
         <Routes>
           <Route path="/login" element={<LogIn />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/" element={<Index />} />
+          <Route path="/admin" element={<Dashboard />} />
         </Routes>
       </BrowserRouter>
       {/* <div className="text-3xl font-semibold bg-white">{count}</div>
